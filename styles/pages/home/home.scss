@@ -1,0 +1,144 @@
+.home {
+  @extend %center;
+  @extend %page;
+
+  overflow: hidden;
+  text-align: center;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+
+  &--active {
+    @extend %page--active;
+  }
+}
+
+.home__wrapper {
+  @extend %cover;
+
+  &:before,
+  &:after {
+    content: "";
+    height: 35rem;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &:before {
+    background: linear-gradient(
+      to bottom,
+      $color-gray 15%,
+      rgba($color-gray, 0) 100%
+    );
+    top: 0;
+  }
+
+  &:after {
+    background: linear-gradient(
+      to top,
+      $color-gray 15%,
+      rgba($color-gray, 0) 100%
+    );
+    bottom: 0;
+  }
+}
+
+.home__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  left: 50%;
+  padding: 0 2.5rem;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  // visibility: hidden;
+
+  @include media("<=phone") {
+    padding: 0 1.5rem;
+  }
+}
+
+.home__gallery__link {
+  display: contents;
+  // visibility: hidden;
+  // position: absolute;
+  // padding: 2.5rem;
+}
+
+.home__gallery__media {
+  padding: 2.5rem;
+  width: 20%;
+  // visibility: hidden;
+
+  &--2 {
+    transform: translateY(10rem);
+  }
+
+  &--3 {
+    transform: translateY(30rem);
+  }
+
+  &--4 {
+    transform: translateY(20rem);
+  }
+
+  &--5 {
+    transform: translateY(40rem);
+  }
+
+  @include media("<=phone") {
+    padding: 1.5rem;
+    width: 50%;
+
+    &--2,
+    &--3,
+    &--4,
+    &--5 {
+      transform: translateY(0);
+    }
+  }
+}
+
+.home__gallery__media__image {
+  display: block;
+  width: 100%;
+}
+
+.home__gallery__text {
+  @extend %title-30;
+
+  color: $color-white;
+}
+
+// .home {
+//   @extend %center;
+//   @extend %page;
+
+//   // background: $color-quicksand;
+//   // color: $color-white;
+//   // background: $color-cream;
+//   // color: $color-black;
+//   background: $color-black;
+//   color: $color-white;
+
+//   &--active {
+//     @extend %page--active;
+//   }
+// }
+
+// .home__wrapper {
+//   @extend %cover;
+
+//   overflow: hidden;
+//   // align-items: center;
+//   // display: flex;
+//   // justify-content: center;
+
+//   @include media('<phone') {
+//     display: block;
+//     margin: auto;
+//     padding: 15rem 0 31.5rem;
+//     width: 66.1rem;
+//   }
+// }

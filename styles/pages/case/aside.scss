@@ -1,0 +1,33 @@
+.case__aside {
+  margin: 10rem auto;
+  width: 114rem;
+
+  @include media('<=phone') {
+    display: block;
+    margin: 15rem auto;
+    padding-left: 3rem;
+  }
+}
+
+.case__aside__wrapper {
+
+}
+
+
+.case__aside__text {
+  @extend %title-20;
+
+  padding-bottom: 2rem;
+
+  @include media('<phone') {
+  }
+}
+
+.case__aside__description {
+  @extend %description-18;
+
+  // padding-top: 4rem;
+
+  @include media('<phone') {
+  }
+}

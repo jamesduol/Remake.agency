@@ -1,0 +1,51 @@
+.work__large {
+  align-items: center;
+  display: flex;
+	// flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+  margin: 20rem auto;
+
+  @include media('<=phone') {
+    display: block;
+    justify-content: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.work__large__link {
+}
+
+.work__large__media {
+  height: 76rem;
+  position: relative;
+  width: 84.7rem;
+
+  @include media('<phone') {
+    height: 75.8rem;
+    // margin-top: 8.5rem;
+    width: 68.9rem;
+  }
+}
+
+.work__large__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+}
+
+.work__large__content {
+}
+
+.work__large__label {
+  @extend %title-24;
+
+  margin-top: 1rem;
+}
+
+.work__large__description {
+  @extend %description-18;
+
+  // margin-top: .5rem;
+}

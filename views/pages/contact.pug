@@ -1,0 +1,49 @@
+.contact(data-background="#000" data-color="#fff")
+    .contact__wrapper
+      each section in contact.data.body
+        if section.slice_type == 'title'
+          header.contact__header
+            .contact__header__wrapper
+              h1.contact__header__title(data-animation="paragraph")!=section.primary.title.replace(/\n/g, '<br>')
+              a.contact__header__email__link(href="mailto:jamesduol782@gmail.com")
+                h1.contact__header__text!=section.primary.text.replace(/\n/g, '<br>')
+
+              .contact__header__column
+                each item in section.items
+                  .contact__header__column__details(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(item.contact)
+
+        if section.slice_type == 'leaders'
+          section.contact__leadership
+            .contact__leadership__wrapper
+              h2.contact__leadership__title(data-animation="title")!=section.primary.title
+
+              .contact__leadership__list
+                article.contact__leadership__article
+
+                  figure.contact__leadership__gallery__media
+                    img.contact__leadership__gallery__media__image(alt=section.primary.image.alt data-src=section.primary.image.url)
+
+                  .contact__leadership__item__content
+                    .contact__leadership__item__header
+                      .contact__leadership__item__header__column!=section.primary.text.replace(/\n/g, '<br>')
+
+                      .contact__leadership__item__header__column(data-animation="title")!=section.primary.experience
+
+                      .contact__leadership__item__description(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(section.primary.description)
+
+        if section.slice_type == 'socials'
+          section.contact__social
+            .contact__social__wrapper
+              h2.contact__social__title!=(section.primary.title).replace(/\n/g, '<br>')
+
+              ul.contact__social__list
+                each item in section.items
+                  li.contact__socials__item(data-animation="label")!=item.text.replace(/\n/g, '<br>')
+                    a.contact__socials__item__link(href="mailto:jamesduol782@gmail.com" target="_blank")
+
+        if section.slice_type == 'footer'
+          section.contact__copyright
+            each item in section.items
+              p.contact__footer__text(data-animation="label")!=item.text.replace(/\n/g, '<br>')
+
+

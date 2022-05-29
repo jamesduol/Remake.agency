@@ -1,0 +1,52 @@
+.about__who {
+  @extend %center;
+
+  margin: 20rem auto;
+  position: relative;
+
+  @include media('<=phone') {
+    display: block;
+  }
+}
+
+.about__who__wrapper {
+  display: flex;
+
+  @include media('<=phone') {
+    display: block;
+  }
+}
+
+.about__who__title {
+  @extend %description-18;
+
+  padding-right: 0.5rem;
+
+  @include media('<=phone') {
+    padding-left: 3rem;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    // width: 15rem;
+  }
+}
+
+.about__who__columns {
+  width: 30rem;
+  // width: 36.2rem;
+
+  // padding-left: 8.2rem;
+
+  @include media('<=phone') {
+    padding-left: 26rem;
+    padding-bottom: 3rem;
+    width: 100%;
+  }
+}
+
+.about__who__description {
+  @extend %description-18;
+
+  // max-width: 44rem;
+  @include media('<=phone') {
+  }
+}

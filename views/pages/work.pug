@@ -1,0 +1,55 @@
+.work(data-background="#000" data-color="#fff")
+    .work__wrapper
+      each section in work.data.body
+        if section.slice_type == 'title'
+          header.work__header
+            h2.work__header__title(data-animation="paragraph")!=section.primary.title.replace(/\n/g, '<br>')
+
+        if section.slice_type == 'study'
+          section.work__projects(class=`${section.primary.type === 'top' ? '.work__projects--top' : '.work__projects--bottom'}`)
+            .work__projects__wrapper
+
+              each media in section.items
+                a.work__projects__link(href=Link(media.link))
+                  figure.work__projects__media(data-animation="parallax")
+                    img.work__projects__media__image(alt=media.image.alt, data-src=media.image.url)
+
+                  .work__projects__information
+                    h2.work__projects__title(data-animation="title")!=media.title.replace(/\n/g, '<br>')
+
+                    p.work__projects__description(data-animation="paragraph")!=media.description.replace(/<p>/g, '<p data-animation="paragraph">')
+
+        if section.slice_type == 'large'
+          section.work__large(class=`${section.primary.type === 'top' ? '.work__large--top' : '.work__large--bottom'}`)
+            a.work__large__link(href=Link(section.primary.link))
+              figure.work__large__media
+                img.work__large__media__image(alt=section.primary.image.alt data-src=section.primary.image.url)
+
+              .work__large__content
+                h2.work__large__label(data-animation="title")!=section.primary.title.replace(/\n/g, '<br>')
+
+                p.work__large__description(data-animation="paragraph")!=section.primary.description.replace(/<p>/g, '<p data-animation="paragraph">')
+
+        if section.slice_type == 'contact'
+          section.work__contact
+              h2.work__contact__title(data-animation="title")!=(section.primary.title).replace(/\n/g, '<br>')
+
+              each item in section.items
+                .work__contact__column
+                  .work__contact__text(data-animation="title")!=(item.text).replace(/\n/g, '<br>')
+                  .work__contact__description__text(data-animation="label")!=(item.description).replace(/\n/g, '<br>')
+                    a.work__header__email__link(href="mailto:jamesduol782@gmail.com")
+
+        if section.slice_type == 'socials'
+          section.work__social
+            h2.work__social__title(data-animation="title")!=(section.primary.title).replace(/\n/g, '<br>')
+
+            ul.work__social__list
+              each item in section.items
+                li.work__socials__item(data-animation="label")!=item.text.replace(/\n/g, '<br>')
+                  a.work__socials__item__link(href="mailto:jamesduol782@gmail.com" target="_blank")
+
+        if section.slice_type == 'footer'
+          section.work__copyright
+            each item in section.items
+              p.work__footer__text(data-animation="label")!=item.text.replace(/\n/g, '<br>')

@@ -1,0 +1,56 @@
+.contact__header {
+  @extend %center;
+
+  margin: 20rem auto;
+  position: relative;
+
+  @include media('<phone') {
+    // display: block;
+  }
+
+}
+
+.contact__header__wrapper {
+  // display: flex;
+
+  @include media('<phone') {
+    // margin: 10rem auto;
+  }
+}
+
+.contact__header__title {
+  @extend %title-60;
+
+  text-align: center;
+
+  @include media('<phone') {
+
+  }
+}
+
+.contact__header__email__link {
+  @extend %link--hidden;
+  @extend %title-24;
+
+  display: block;
+}
+
+.contact__header__text {
+  @extend %title-53;
+
+  margin-top: 4rem;
+}
+
+.contact__header__column {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rem;
+}
+
+.contact__header__column__details {
+  @extend %description-18;
+
+  @include media('<phone') {
+    justify-content: space-around;
+  }
+}

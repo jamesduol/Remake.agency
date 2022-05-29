@@ -1,0 +1,19 @@
+.contact__copyright {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8rem;
+
+  @include media('<phone') {
+  margin-top: 4rem;
+  }
+}
+
+.contact__footer__text {
+  @extend %title-20;
+
+  margin-bottom: 8rem;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+  }
+}

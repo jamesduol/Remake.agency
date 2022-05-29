@@ -1,0 +1,22 @@
+.work {
+  @extend %page;
+
+  // background: $color-black;
+  // // color: $color-white;
+  // color: $color-quarter-spanish-white;
+
+  &--active {
+    @extend %page--active;
+  }
+}
+
+.work__wrapper {
+  // background: $color-black;
+  // border-top: 2px solid #fff;
+  padding: 20rem 0 5rem;
+
+  @include media('<=phone') {
+    // margin: 0 3rem 3rem;
+    padding: 20rem 0 0;
+  }
+}

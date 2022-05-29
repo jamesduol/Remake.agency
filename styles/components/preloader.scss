@@ -1,0 +1,52 @@
+.preloader {
+  @extend %center;
+  @extend %cover;
+
+  background: $color-black;
+  // background: $color-light-blue;
+  //color: $color-white;
+  // color: $color-light-yellow;
+  color: $color-quarter-spanish-white;
+  display: flex;
+  // display: none;
+  text-align: center;
+  z-index: z("preloader");
+}
+
+.preloader__text {
+  @extend %title-53;
+  // @extend %title-30;
+
+  max-width: 67rem;
+  opacity: 0;
+
+  span span {
+    @extend %title-53;
+    // @extend %title-30;
+
+    display: inline-block;
+    transform-origin: center center 0.5em;
+  }
+}
+
+.preloader__number {
+  @extend %description-14;
+
+  bottom: 52%;
+  left: 55.4%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  width: 9.6rem;
+
+  @include media("<phone") {
+    bottom: 52%;
+    left: 65%;
+    font-size: 2.4rem;
+  }
+}
+
+.preloader__number__text {
+  display: inline-block;
+}

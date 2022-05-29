@@ -1,0 +1,48 @@
+.about__sectors {
+  display: flex;
+  justify-content: center;
+  margin: 20rem auto;
+  position: relative;
+
+  @include media('<=phone') {
+    display: block;
+  }
+}
+
+.about__sectors__wrapper {
+  display: flex;
+
+  @include media('<=phone') {
+    display: block;
+  }
+}
+
+.about__sectors__title {
+  @extend %description-18;
+
+  padding-right: 32rem;
+
+  @include media('<phone') {
+    padding-left: 3rem;
+  }
+}
+
+.about__sectors__names {
+  width: 30rem;
+
+  @include media('<=phone') {
+    margin-left: 26rem;
+    padding-bottom: 3rem;
+    width: 66.6%;
+  }
+}
+
+.about__sectors__name {
+  @extend %description-18;
+
+  // white-space: nowrap;
+
+  @include media('<=phone') {
+
+  }
+}

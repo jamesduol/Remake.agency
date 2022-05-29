@@ -1,0 +1,102 @@
+.case__related__projects {
+  padding: 4rem 0 8rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media('<=phone') {
+    display: block;
+
+    &:first-child {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-top: 5rem;
+      width: 100%;
+    }
+   }
+  }
+
+  .case__related__projects__wrapper {
+    height: 104rem;
+    margin: auto;
+    position: relative;
+    width: 144rem;
+
+    @include media('<=phone') {
+      height: 174.2rem;
+      width: 100%;
+    }
+  }
+
+  .case__related__projects__medias {}
+
+  .case__related__projects__link {
+    display: block;
+    position: absolute;
+
+    &:first-child {
+      left: 0;
+      top: 0;
+    }
+
+    &:last-child {
+      bottom: 0;
+      right: 0;
+    }
+
+    @include media('<=phone') {
+   }
+  }
+
+  .case__related__gallery__media {
+    height: 63rem;
+    overflow: hidden;
+    position: relative;
+    width: 54rem;
+
+    &:first-child {
+      left: 0;
+      top: 0;
+    }
+
+    &:last-child {
+      bottom: 0;
+      right: 0;
+    }
+
+    @include media('<=phone') {
+    }
+  }
+
+  .case__related__gallery__media__image {
+    @extend %cover;
+
+    object-fit: cover;
+  }
+
+  .case__related__projects__information {}
+
+  .case__related__project__title {
+    @extend %title-20;
+
+    padding-top: 1rem;
+
+    @include media('<phone') {
+      padding-left: 3rem;
+    }
+  }
+
+  .work__projects__description {
+    @extend %description-18;
+
+    @include media('<phone') {
+      padding-left: 3rem;
+    }
+  }

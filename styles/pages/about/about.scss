@@ -1,0 +1,16 @@
+.about {
+  @extend %page;
+
+  &--active {
+    @extend %page--active;
+  }
+}
+
+.about__wrapper {
+  align-items: center;
+  padding: 10rem 0 5rem;
+
+  @include media("<=phone") {
+    padding: 10rem 0 0;
+  }
+}

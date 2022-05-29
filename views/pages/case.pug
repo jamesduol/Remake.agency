@@ -1,0 +1,70 @@
+.case(data-background="#000" data-color="#fff")
+    .case__wrapper
+      section.case__image
+        .case__image__wrapper
+          .case__image__box
+            figure.case__image__media
+              img.case__image__media__image(data-alt=study.data.image.alt, data-src=study.data.image.url)
+
+      each section in study.data.body
+        if section.slice_type == 'header'
+          header.case__header
+            .case__header__column
+              h1.case__header__title(data-animation="title")!=section.primary.title.replace(/\n/g, '<br>')
+
+              .case__header__description(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(section.primary.description)
+
+            .case__header__column
+              .case__header__information
+                each item in section.items
+                  h2.case__header__information__text(data-animation="paragraph")!=item.text.replace(/\n/g, '<br>')
+
+                  .case__header__information__description(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(item.description)
+
+        if section.slice_type == 'highlight'
+          section.case__highlight
+            .case__highlight__wrapper
+
+              .case__highlight__medias
+                each media in section.items
+                  figure.case__highlight__media(data-animation="parallax")
+                    img.case__highlight__media__image(alt=media.image.alt data-src=media.image.url)
+
+        if section.slice_type == 'aside'
+          aside.case__aside
+            .case__aside__wrapper
+              each item in section.items
+                h2.case__aside__text(data-animation="title")!=item.text
+
+                .case__aside__description(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(item.description)
+
+        if section.slice_type == 'banner'
+          section.case__banner
+            .case__banner__wrapper
+              .case__banner__box
+                figure.case__banner__media(data-animation="magnetic")
+                  img.case__banner__media__image(alt=section.primary.image.alt data-src=section.primary.image.url)
+
+        if section.slice_type == 'related'
+          section.case__related
+            .case__related__wrapper
+              .case__related__header
+                .case__related__header__wrapper
+                  h2.case__related__title=section.primary.title.replace(/\n/g, '<br>')
+
+                  a.case__related__text__link(href=Link(section.primary.link))
+                    p.case__related__text=section.primary.text
+
+        if section.slice_type == 'projects'
+          section.case__related__projects(class=`${section.primary.type === 'top' ? '.case__related__projects--top' : '.case__related__projects--bottom'}`)
+            .case__related__projects__wrapper
+
+              each media in section.items
+                a.case__related__projects__link(href=Link(media.link))
+                  figure.case__related__gallery__media(data-animation="parallax")
+                    img.case__related__gallery__media__image(alt=media.related_image.alt data-src=media.related_image.url)
+
+                  .case__related__projects__information
+                    h2.case__related__project__title=media.title.replace(/\n/g, '<br>')
+
+                    .work__projects__description!=media.description

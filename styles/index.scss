@@ -1,0 +1,62 @@
+@import './base/reset';
+
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/mixins';
+@import './utils/vendors';
+@import './utils/responsive';
+
+@import './shared/descriptions';
+@import './shared/links';
+@import './shared/pages';
+@import './shared/titles';
+@import './shared/vertical-titles';
+
+@import './base/fonts';
+@import './base/base';
+
+@import './components/preloader';
+@import './components/transition';
+
+@import './layout/navigation';
+
+@import './pages/about/about';
+@import './pages/about/around';
+@import './pages/about/clients';
+@import './pages/about/contact';
+@import './pages/about/copyright';
+@import './pages/about/global';
+@import './pages/about/header';
+@import './pages/about/media';
+@import './pages/about/sectors';
+@import './pages/about/services';
+@import './pages/about/socials';
+@import './pages/about/who';
+
+@import './pages/case/aside';
+@import './pages/case/banner';
+@import './pages/case/case';
+@import './pages/case/header';
+@import './pages/case/highlight';
+@import './pages/case/image';
+@import './pages/case/projects';
+@import './pages/case/related';
+
+@import './pages/contact/contact';
+@import './pages/contact/copyright';
+@import './pages/contact/header';
+@import './pages/contact/leadership';
+@import './pages/contact/socials';
+
+@import './pages/home/home';
+
+@import './pages/work/case';
+@import './pages/work/contact';
+@import './pages/work/copyright';
+@import './pages/work/header';
+@import './pages/work/large';
+@import './pages/work/projects';
+@import './pages/work/socials';
+@import './pages/work/work';
+
+

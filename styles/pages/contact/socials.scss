@@ -1,0 +1,50 @@
+.contact__social{
+  display: flex;
+  justify-content: space-around;
+  margin: 20rem auto;
+  position: relative;
+
+  @include media('<phone') {
+    display: block;
+    margin-left: 3rem;
+  }
+}
+
+.contact__social__wrapper {
+  display: flex;
+}
+
+.contact__social__title {
+  @extend %title-20;
+
+  margin-right: 30rem;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+    margin-right: 15rem;
+  }
+}
+
+.contact__social__list {
+  width: 40rem;
+
+  @include media('<phone') {
+    margin-top: 1.5rem;;
+  }
+}
+
+.contact__socials__item {
+  @extend %description-18;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+  }
+}
+
+.contact__socials__item__link[href]  {
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: burlywood;
+  }
+}

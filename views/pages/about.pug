@@ -1,0 +1,98 @@
+.about(data-background="#000" data-color="#fff")
+    .about__wrapper
+      each section in about.data.body
+        if section.slice_type == 'title'
+          header.about__header
+            h1.about__header__title(data-animation="paragraph")!=section.primary.title.replace(/\n/g, '<br>')
+
+        if section.slice_type == 'us'
+          section.about__who
+            .about__who__wrapper
+              h2.about__who__title(data-animation="label")!=section.primary.title.replace(/<p>/g, '<p data-animation="title">')
+
+              each item in section.items
+                .about__who__columns
+                  .about__who__description(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(item.description)
+
+        if section.slice_type == 'brand'
+          section.about__services
+            .about__services__wrapper
+              h2.about__services__title(data-animation="label")!=section.primary.title.replace(/\n/g, '<br>')
+
+              each item in section.items
+                .about__services__columns
+                  h2.about__services__label(data-animation="paragraph")!=item.label.replace(/\n/g, '<br>')
+
+                  .about__services__column(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(item.description)
+
+        if section.slice_type == 'media'
+          section.about__media__content
+            .about__media__wrapper
+              .about__media__box
+                figure.about__media
+                  img.about__media__image(alt=section.primary.image.alt data-src=section.primary.image.url)
+
+        if section.slice_type == 'location'
+          section.about__around
+            .about__around__wrapper
+              h2.about__around__article__title(data-animation="label")!=section.primary.title.replace(/\n/g, '<br>')
+
+              .about__around__article__information
+                each item, index in section.items
+                  ul.about__around__list(class=`${index === 0 ? 'about__around__list--active' : 'about__around__list--inactive'}`)!=PrismicDOM.RichText.asHtml(item.list)
+
+        if section.slice_type == 'culture'
+          section.about__global
+            .about__global__wrapper
+              h2.about__global__title(data-animation="paragraph")!=section.primary.title.replace(/\n/g, '<br>')
+
+              .about__global__columns
+                each item in section.items
+                  .about__global__description(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(item.description)
+
+        if section.slice_type == 'clients'
+          section.about__clients
+            .about__clients__wrapper
+              h2.about__clients__title(data-animation="label")!=section.primary.title.replace(/\n/g, '<br>')
+
+              each item in section.items
+                ul.about__clients__names
+                  li.about__clients__name(data-animation="line")!=PrismicDOM.RichText.asHtml(item.description)
+
+        if section.slice_type == 'sectors'
+          section.about__sectors
+            .about__sectors__wrapper
+              h2.about__sectors__title(data-animation="label")!=section.primary.title.replace(/\n/g, '<br>')
+
+              each item in section.items
+                .about__sectors__names
+                  .about__sectors__name(data-animation="paragraph")!=PrismicDOM.RichText.asHtml(item.name)
+
+        if section.slice_type == 'contact'
+          section.about__contact
+            .about__contact__wrapper
+              h2.about__contact__title(data-animation="title")!=(section.primary.title).replace(/\n/g, '<br>')
+
+              each item in section.items
+                .about__contact__column
+                  .about__contact__text(data-animation="title")!=(item.label).replace(/\n/g, '<br>')
+                  .about__contact__description__text
+                    a.about__header__email__link(href="mailto:jamesduol782@gmail.com")=(item.description)
+
+
+        if section.slice_type == 'socials'
+          section.about__social
+            .about__social__wrapper
+              h2.about__social__title(data-animation="label")!=(section.primary.title).replace(/\n/g, '<br>')
+
+              ul.about__social__list
+                each item in section.items
+                  li.about__socials__item
+                    a.about__socials__item__link(href=Link(item.link) target="_blank")=item.text.replace(/\n/g, '<br>')
+
+
+        if section.slice_type == 'footer'
+          section.about__copyright
+              each item in section.items
+                p.about__footer__text(data-animation="title")!=item.text.replace(/\n/g, '<br>')
+

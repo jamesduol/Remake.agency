@@ -1,0 +1,20 @@
+.about__header {
+  margin-top: 8rem;
+  position: relative;
+
+  @include media('<phone') {
+    margin-top: 10rem;
+  }
+}
+
+.about__header__title {
+  @extend %title-60;
+
+  margin: auto;
+  // max-width: 124;
+  text-align: center;
+
+  @include media('<phone') {
+
+  }
+}

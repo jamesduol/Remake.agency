@@ -1,0 +1,31 @@
+.case__banner {
+  margin: 20rem auto;
+}
+
+.case__banner__wrapper {
+  height: 76rem;
+  margin: auto;
+  position: relative;
+  width: 144rem;
+
+  @include media('<=phone') {
+    width: 68rem;
+  }
+}
+
+.case__banner__box {}
+
+.case__banner__media {
+  height: 76rem;
+  position: relative;
+
+  @include media('<=phone') {
+    // height: 54rem;
+  }
+}
+
+.case__banner__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+}

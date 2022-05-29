@@ -1,0 +1,127 @@
+.about__around {
+  display: flex;
+  justify-content: center;
+  margin: 20rem auto;
+  position: relative;
+
+  @include media("<phone") {
+    display: block;
+    padding-bottom: 2rem;
+  }
+}
+
+.about__around__wrapper {
+  @extend %cover;
+
+  @include media("<phone") {
+    display: block;
+  }
+}
+
+.about__around__article__title {
+  @extend %description-18;
+
+  padding-left: 31rem;
+
+  @include media("<phone") {
+    padding-left: 3rem;
+  }
+}
+
+.about__around__article__information {
+}
+
+.about__around__list {
+  @extend %title-60;
+
+  padding-left: 30rem;
+
+  display: inline-block;
+  opacity: 0;
+  position: absolute;
+
+  &--active {
+    -webkit-animation: word-vertical-animation-in 0.6s;
+    animation: word-vertical-animation-in 0.6s;
+    opacity: 1;
+  }
+
+  &--inactive {
+    -webkit-animation: word-vertical-animation-out 0.6s;
+    animation: word-vertical-animation-out 0.6s;
+  }
+
+
+  @-webkit-keyframes word-vertical-animation-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+  }
+  @keyframes word-vertical-animation-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+  }
+  @-webkit-keyframes word-vertical-animation-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  @keyframes word-vertical-animation-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+
+  @include media("<=phone") {
+  padding-left: 8rem;
+  padding-top: 4rem;
+  }
+}
+
+
+.about__around__article__description {
+  // @extend %title-30;
+  @extend %title-60;
+
+  @include media("<phone") {
+    // font-size: 3.2rem;
+  }
+}

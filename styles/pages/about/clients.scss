@@ -1,0 +1,51 @@
+.about__clients {
+  display: flex;
+  justify-content: center;
+  margin: 20rem auto;
+  position: relative;
+
+ @include media('<phone') {
+  display: block;
+  padding-left: 3rem;
+ }
+}
+
+.about__clients__wrapper {
+  display: flex;
+
+}
+
+.about__clients__title {
+  @extend %description-18;
+
+  padding-right: 31rem;
+
+  @include media('<=phone') {
+    padding-right: 8rem;
+    white-space: pre;
+  }
+}
+
+.about__clients__names {
+  width: 30rem;
+
+  @include media('<=phone') {
+    padding-right: 3rem;
+  }
+}
+
+.about__clients__name {
+  @extend %title-20;
+
+  // line-height: 2.5;
+
+  // display: flex;
+  // justify-content: space-between;
+  padding: 2rem;
+  // position: relative;
+
+  @include media('<=phone') {
+    font-size: 3.2rem;
+    line-height: 1.5;
+  }
+}

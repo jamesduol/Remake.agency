@@ -1,0 +1,54 @@
+.work__contact {
+  display: flex;
+  // justify-content: space-around;
+  justify-content: space-evenly;
+
+@include media('<phone') {
+  display: block;
+  margin-left: 3rem;
+  margin-right: 3rem;
+ }
+}
+
+
+.work__contact__title {
+  @extend %title-53;
+
+  //   margin-left: 3rem;
+
+  @include media('<phone') {
+ }
+}
+
+.work__contact__column {
+  margin-top: 10rem;
+
+  @include media('<phone') {
+    margin-top: 5rem;
+  }
+}
+
+.work__contact__text {
+  @extend %description-18;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+  }
+}
+
+
+.work__header__email__link {
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: burlywood;
+  }
+}
+
+.work__contact__description__text {
+  @extend %description-18;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+  }
+}

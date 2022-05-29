@@ -1,0 +1,65 @@
+.work__social {
+  display: flex;
+  justify-content: space-around;
+  // justify-content: space-evenly;
+  margin-top: 8rem;
+
+  @include media('<phone') {
+    display: block;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: 90%;
+  }
+}
+
+.work__social__title {
+  @extend %title-20;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+  }
+}
+
+.work__social__list {
+    @include media('<phone') {
+    margin-top: 1.5rem;;
+  }
+}
+
+.work__socials__item {
+  @extend %description-18;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+  }
+}
+
+.work__socials__item__link[href]  {
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: burlywood;
+  }
+}
+
+.work__copyright {
+  display: flex;
+  // justify-content: space-around;
+  justify-content: space-evenly;
+  margin-top: 8rem;
+
+  @include media('<phone') {
+  //     justify-content: space-evenly;
+  margin-top: 4rem;
+  }
+}
+
+.work__footer__text {
+  @extend %title-20;
+
+  margin-bottom: 8rem;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+  }
+}

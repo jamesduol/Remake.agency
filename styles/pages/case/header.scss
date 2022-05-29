@@ -1,0 +1,92 @@
+.case__header {
+  display: flex;
+  justify-content: space-around;
+  margin: 20rem auto;
+  position: relative;
+  width: 114rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media('<=phone') {
+    display: block;
+    padding-left: 3rem;
+  }
+}
+
+.case__header__media {
+}
+
+.case__header__column {
+
+  &:first-child {
+    padding-right: 5.4rem;
+    width: 60rem;
+  }
+
+  &:last-child {
+    width: calc(100% - 60rem);
+  }
+
+  @include media('<=phone') {
+
+  }
+}
+
+.case__header__title {
+  @extend %title-60;
+}
+
+.case__header__information__title {
+}
+
+.case__header__description {
+  @extend %title-20;
+
+  letter-spacing: 0.5;
+  line-height: 1.25;
+  // padding-top: 3rem;
+
+  @include media('<=phone') {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.case__header__information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1px;
+}
+
+.case__header__information__text {
+  @extend %description-18;
+
+  padding-top: 1.6rem;
+
+  &:first-child {
+    width: 30rem;
+  }
+
+  @include media('<=phone') {
+    &:first-child {
+      width: 42%;
+    }
+
+    &:nth-child(2) {
+      width: 58%;
+    }
+  }
+}
+
+.case__header__information__description {
+  @extend %description-18;
+
+  padding-top: 1.6rem;
+  width: 30rem;
+}

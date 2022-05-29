@@ -1,0 +1,46 @@
+.preloader {
+    @extend %center;
+    @extend %cover;
+
+    // $color-contessa: #c97164;
+
+    align-items: center;
+    background: $color-contessa;
+    // background: $color-black;
+    // color: $color-white;
+    color: $color-quarter-spanish-white;
+    // display: flex;
+    //display: none;
+    justify-content: center;
+    text-align: center;
+    // height: 100%;
+    // left: 0;
+    // // object-fit: cover;
+    // position: absolute;
+    // top: 0;
+    // width: 100%;
+
+  z-index: z('preloader');
+}
+
+.preloader__text {
+    @extend %title-53;
+
+    // font-family: $font-george-x;
+    // font-size: 5.3rem;
+
+    line-height: 1;
+    max-width: 66rem;
+}
+
+.preloader__number{
+    @extend %description-14 !optional;
+
+    // font-size: 1.4rem;
+
+    bottom: 7.3rem;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+

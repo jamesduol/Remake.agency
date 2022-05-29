@@ -1,0 +1,20 @@
+.contact {
+  @extend %page;
+
+  &--active {
+    @extend %page--active;
+  }
+}
+
+.contact__wrapper {
+  padding: 10rem 0 5rem;
+
+  @include media('<phone') {
+    padding: 10rem 0 10rem;
+  }
+}
+
+
+
+
+

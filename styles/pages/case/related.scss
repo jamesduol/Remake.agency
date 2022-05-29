@@ -1,0 +1,56 @@
+.case__related {
+  // margin: 10rem auto;
+  padding-bottom: 10rem;
+}
+
+.case__related__wrapper {
+  margin: auto;
+  width: 144rem;
+
+  @include media('<=phone') {
+    width: 124rem;
+  }
+}
+
+.case__related__header {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+  position: relative;
+  -webkit-transition: border-top 1s ease;
+  transition: border-top 1s ease;
+}
+
+.case__related__header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  @include media('<=phone') {
+    justify-content: flex-start;
+
+    &:first-child {
+      padding-left: 3rem;
+    }
+
+  }
+}
+
+.case__related__title {
+  @extend %title-24;
+
+  @include media('<=phone') {
+
+    font-size: 2.8rem;
+  }
+}
+
+.case__related__text__link {
+  // display: block;
+}
+
+.case__related__text {
+  @extend %description-18;
+
+  @include media('<=phone') {
+    padding-left: 28rem;
+  }
+}
+

@@ -1,0 +1,73 @@
+.work__case {
+  background: $color-black;
+  color: $color-white;
+  // color: $color-black;
+  margin: 20rem auto;
+  // position: relative;
+
+  // margin: 0 auto;
+  // width: 114rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.work__case__wrapper {
+  height: 104rem;
+  margin: auto;
+  position: relative;
+  width: 144rem;
+
+  .about__highlight:nth-child(2) & {
+    width: 104rem;
+  }
+}
+
+// .work__case__box {
+//   display: flex;
+// }
+
+.work__case__link {
+}
+
+.work__case__media {
+  height: 76rem;
+  overflow: hidden;
+  position: absolute;
+  width: 54rem;
+
+  .work__projects:nth-child(4) & {
+    height: 52.8rem;
+    width: 36rem;
+  }
+
+  &:first-child {
+    left: 0;
+    top: 0;
+  }
+
+  &:last-child {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.work__case__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+}
+
+.work__case__content {
+}
+
+.work__case__label {
+}
+
+.work__case__description {
+}

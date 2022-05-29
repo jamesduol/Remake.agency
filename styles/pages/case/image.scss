@@ -1,0 +1,31 @@
+.case__image {
+  display: flex;
+  margin: 10rem auto;
+  position: relative;
+}
+.case__image__wrapper {
+  margin: auto;
+  position: relative;
+  width: 144rem;
+
+  @include media('<=phone') {
+    width: 68rem;
+  }
+}
+
+.case__image__box {}
+
+.case__image__media {
+  height: 76rem;
+  position: relative;
+
+  @include media('<=phone') {
+    height: 54rem;
+  }
+}
+
+.case__image__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+}

@@ -1,0 +1,49 @@
+.about__social {
+  display: flex;
+  justify-content: center;
+  margin: 20rem auto;
+  position: relative;
+
+  @include media('<phone') {
+    display: block;
+    padding-left: 3rem;
+  }
+}
+
+.about__social__wrapper {
+  display: flex;
+}
+
+.about__social__title{
+  @extend %title-20;
+
+  padding-right: 30rem;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+    padding-right: 15rem;
+  }
+}
+
+.about__social__list {
+  width: 40rem;
+
+  @include media('<phone') {
+    padding-top: 1.5rem;;
+  }
+}
+
+.about__socials__item {
+  @extend %description-18;
+
+  @include media('<phone') {
+  }
+}
+
+.about__socials__item__link[href]  {
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: burlywood;
+  }
+}

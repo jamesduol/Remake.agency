@@ -1,0 +1,29 @@
+.about__media__content {
+  margin: 20rem auto;
+}
+
+.about__media__wrapper {
+  height: 76rem;
+  margin: auto;
+  position: relative;
+  width: 144rem;
+
+  @include media('<=phone') {
+    width: 68rem;
+  }
+}
+
+.about__media {
+  height: 76rem;
+  position: relative;
+
+  @include media('<=phone') {
+    // width: 100%;
+  }
+}
+
+.about__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+}
